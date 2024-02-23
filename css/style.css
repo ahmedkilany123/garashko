@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Alexandria", sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    list-style: none;
+    transition: .3s;
+}
+
+:root {
+    --back-color: #1357b7;
+    --white-color:white;
+    --padding-left: 60px;
+    --padding-right:60px;
+
+
+}
+
+body {
+    background: url(../img/backlog.png);
+    background-position: center;
+    background-size: cover;
+    background-size: 100%;
+}
+header {
+    position: fixed;
+    z-index: 100;
+    width: calc(100% - 60px);
+    max-width: 100%;
+    margin: 10px 30px;
+    border: 5px solid var(--white-color);
+    border-radius: 10px;
+}
+header .container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav ul li {
+    border-radius: 6px;
+    margin: 1px;
+}
+header nav ul li:nth-child(2) {
+    position: relative;
+}
+header nav ul li:nth-child(2)::after {
+    content: "\f0d7";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    z-index: 100;
+    color: aliceblue;
+    right: 3px;
+    transform: translateY(-50%);
+    top: 50%;
+}
+header nav ul li a {
+    color: var(--white-color);
+    padding: 15px;
+    font-size: 22px;
+    margin: 3px;
+}
+header nav ul li.active {
+    background-color: var(--back-color);
+}
+.logo img {
+    height: 75px;
+    width: 150px;
+}
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.left .login {
+    padding: 5px;
+}
+.left .login a {
+    color: var(--white-color);
+}
+
+.left .login:hover,
+.left .login.active {
+    background: var(--back-color);
+    border-radius: 10px;
+}
+
+.left .srch {
+    display: flex;
+    position: relative;
+}
+.left .srch i {
+    color: var(--white-color);
+    background-color: #99b1c9;
+    border-radius: 50%;
+    padding: 5px;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    margin-left: -15px;
+}
+.left .srch input {
+    border-radius: 10px;
+    padding: 10px ;
+    text-align: center;
+    display: none;
+}
+.left .srch i:hover,
+.left .srch i.active {
+    background: var(--back-color);
+}
+.left .srch i.active + input {
+    display: block;
+}
+
+
+
+/* strt landing section  */
+
+.landing {
+    height: 100vh;
+    display: block;
+    position: relative;
+}
+.landing .container {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 60px;
+    width: 100%;
+}
+.landing .info {
+    color: var(--white-color);
+}
+.landing .info h2 {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+.landing .info p {
+    font-size: 26px;
+    font-weight: 600;
+}
+.landing img {
+    width: 700px;
+}
+.landing ul {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 100px;
+    color: var(--white-color);
+    padding: var(--padding-left);
+}
+.landing ul li {
+    padding: 15px 50px ;
+    border: 2px solid var(--white-color);
+    border-radius: 20px;
+    position: relative;
+}
+.landing ul li::after {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    color: var(--white-color);
+    right: -15px;
+    background: orangered;
+    padding: 15px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    top: 50%;
+}
