@@ -24,11 +24,14 @@ srchIcon.onclick = function () {
 
 
 let login = document.getElementById("login");
+let logBox = document.querySelector(".left .logBox");
 
 login.onclick = function () {
     if (login.classList.contains("active") ) {
         login.classList.remove("active");
+        logBox.classList.remove("active");
     } else {
     login.classList.add("active");
+    logBox.classList.add("active");
     }
 }
