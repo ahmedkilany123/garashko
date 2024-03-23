@@ -2,13 +2,51 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Garashko</title>
-    <!-- stylesheet css -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/framework.css" />
 
-    <!-- font-awesome  -->
+    <!--  Essential META Tags -->
+    <meta property="og:title" content="Garashko EG" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://ahmedkilany123.github.io/GP-Garashko/assets/images/logo.png"
+    />
+    <meta
+      property="og:url"
+      content="https://ahmedkilany123.github.io/GP-Garashko"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!--  Non-Essential, But Recommended -->
+    <meta
+      property="og:description"
+      content="The cleanliness and safety of your car with Garashko"
+    />
+    <meta property="og:site_name" content="Garashko" />
+    <meta name="twitter:image:alt" content="Garashko image" />
+
+    <!--  Non-Essential, But Required for Analytics -->
+    <meta property="fb:app_id" content="61557761423216" />
+    <meta name="twitter:site" content="@garashko_eg" />
+
+    <title>login</title>
+
+    <!-- 
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.png"
+      type="image/svg+xml"
+    />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- font awesome  -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -16,201 +54,471 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- google fonts  -->
+
+    <!-- 
+    - google font link
+  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
 
   <body>
-    <header>
-      <div class="container between-flex p-relative pt-10 pb-10 plr-30">
-        <a href="#" class="logo"><img src="img/logo.png" alt="" /></a>
-        <nav>
-          <ul class="between-flex">
-            <li><a href="index.html">home</a></li>
-            <li class="p-relative"><a href="services.html">services</a></li>
-            <li><a href="features.html">Features</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="team.html">Team</a></li>
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+      <div class="overlay" data-overlay></div>
+
+      <div class="header-top">
+        <div class="container">
+          <ul class="header-top-list">
+            <li>
+              <a href="mailto:garashko.eg@gmail.com" class="header-top-link">
+                <ion-icon name="mail-outline"></ion-icon>
+
+                <span>garashko.eg@gmail.com</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="header-top-link">
+                <ion-icon name="location-outline"></ion-icon>
+
+                <address>Alexandria , Egypt</address>
+              </a>
+            </li>
           </ul>
-        </nav>
-        <div class="left between-flex gap-20">
-          <div class="srch p-relative d-flex">
-            <a href="#">
-              <i class="fa-solid fa-magnifying-glass" id="srchIcon"></i>
-              <input
-                type="text"
-                placeholder="search here ..."
-                dir="auto"
-                name="search"
-                id="search"
-              />
+
+          <div class="wrapper">
+            <ul class="header-top-social-list">
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61557761423216&mibextid=ZbWKwL"
+                  class="header-top-social-link"
+                  target="_blank"
+                >
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://twitter.com/garashko_eg"
+                  class="header-top-social-link"
+                  target="_blank"
+                >
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.instagram.com/garashko_eg"
+                  class="header-top-social-link"
+                  target="_blank"
+                >
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.tiktok.com/@garashko_eg"
+                  class="header-top-social-link"
+                  target="_blank"
+                >
+                  <ion-icon name="logo-tiktok"></ion-icon>
+                </a>
+              </li>
+            </ul>
+
+            <a href="#" class="btn">
+              <ion-icon name="wallet-outline"></ion-icon>
+              <p>0</p>
             </a>
           </div>
-          <div class="login">
-            <a href="#" id="login">
-              <i class="fa-solid fa-user"></i>
-              login
-            </a>
-            <div class="logBox">
-              <h3>login</h3>
-              <div class="info">
-                <label for="username">username</label>
-                <input
-                  type="email"
-                  name="username"
-                  id="username"
-                  placeholder="your email .."
-                />
-                <label for="password">password</label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="your password .."
-                />
-                <a href="#">forget your password?</a>
-                <input type="checkbox" name="forget" id="forget" />
-                <label for="forget">remember me</label>
-              </div>
-              <input type="submit" value="login" />
-              <p>or</p>
-              <div class="social d-flex align-center gap-20">
-                <i class="fa-brands fa-google"></i>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-x-twitter"></i>
-              </div>
-              <a href="login.html">create acount now</a>
+        </div>
+      </div>
+
+      <div class="header-bottom">
+        <div class="container">
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.png" alt="Garashko logo" />
+          </a>
+
+          <nav class="navbar" data-navbar>
+            <div class="navbar-top">
+              <a href="#" class="logo">
+                <img src="./assets/images/logo.png" alt="Garashko logo" />
+              </a>
+
+              <button
+                class="nav-close-btn"
+                data-nav-close-btn
+                aria-label="Close Menu"
+              >
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
             </div>
+
+            <div class="navbar-bottom">
+              <ul class="navbar-list">
+                <li>
+                  <a href="#home" class="navbar-link" data-nav-link>Home</a>
+                </li>
+
+                <li>
+                  <a href="#about" class="navbar-link" data-nav-link>About</a>
+                </li>
+
+                <li>
+                  <a href="#service" class="navbar-link" data-nav-link
+                    >Service</a
+                  >
+                </li>
+
+                <li>
+                  <a href="#property" class="navbar-link" data-nav-link
+                    >Property</a
+                  >
+                </li>
+
+                <li>
+                  <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+                </li>
+
+                <li>
+                  <a href="#contact" class="navbar-link" data-nav-link
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="header-bottom-actions">
+            <button
+              class="header-bottom-actions-btn"
+              id="search-btn"
+              aria-label="Search"
+            >
+              <ion-icon id="search-btn" name="search-outline"></ion-icon>
+
+              <span>Search</span>
+            </button>
+
+            <button
+              class="header-bottom-actions-btn"
+              id="login-btn"
+              aria-label="Profile"
+            >
+              <ion-icon name="person-outline"></ion-icon>
+
+              <span>Profile</span>
+            </button>
+
+            <button
+              class="header-bottom-actions-btn"
+              id="cart-btn"
+              aria-label="Cart"
+            >
+              <ion-icon name="cart-outline"></ion-icon>
+
+              <span>Cart</span>
+            </button>
+
+            <button
+              class="header-bottom-actions-btn"
+              data-nav-open-btn
+              aria-label="Open Menu"
+            >
+              <ion-icon name="menu-outline"></ion-icon>
+
+              <span>Menu</span>
+            </button>
+
+            <form action="" class="search-form">
+              <input
+                dir="auto"
+                type="search"
+                id="shearch-box"
+                placeholder="search here..."
+              />
+              <label for="search-box" class="fas fa-search"></label>
+            </form>
+
+            <div class="shopping-cart">
+              <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="assets/images/cash.png" alt="" />
+                <div class="content">
+                  <h3>50 points</h3>
+                  <span class="price">50 Egp</span>
+                  <span class="quantity"></span>
+                </div>
+              </div>
+              <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="assets/images/cash.png" alt="" />
+                <div class="content">
+                  <h3>100 points</h3>
+                  <span class="price">100 Egp</span>
+                  <span class="quantity"></span>
+                </div>
+              </div>
+              <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="assets/images/cash.png" alt="" />
+                <div class="content">
+                  <h3>150 points</h3>
+                  <span class="price">150 Egp</span>
+                  <span class="quantity"></span>
+                </div>
+              </div>
+              <div class="total">total : 400 Egp</div>
+              <a href="#" class="btn check-cart">check out</a>
+            </div>
+
+            <form action="" class="login-form">
+              <h3>login now</h3>
+              <input
+                type="email"
+                name="email"
+                class="box"
+                placeholder="your email"
+              />
+              <input
+                type="password"
+                name="password"
+                class="box"
+                placeholder="your password"
+              />
+              <p>forget your password ? <a href="#">click here</a></p>
+              <p>don't have acount ? <a href="#">creat now</a></p>
+              <a href="#" class="btn btn-log">login</a>
+            </form>
           </div>
         </div>
       </div>
     </header>
-    <!-- start landing section  -->
-    <section class="signUp between-flex">
-      <div class="info">
-        <img src="img/logo.png" alt="logo" />
-        <h3>Make your life easy</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia,
-          sequi!
-        </p>
-        <p>or</p>
-        <div class="social align-center content-center gap-20">
-          <i class="fa-brands fa-google"></i>
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-x-twitter"></i>
+
+    <main>
+      <article>
+        <section>
+          <div class="container"></div>
+        </section>
+      </article>
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-brand">
+            <a href="#" class="logo">
+              <img src="./assets/images/logo-light.png" alt="Garashko logo" />
+            </a>
+
+            <p class="section-text">
+              Lorem Ipsum is simply dummy text of the and typesetting industry.
+              Lorem Ipsum is dummy text of the printing.
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                <a href="#" class="contact-link">
+                  <ion-icon name="location-outline"></ion-icon>
+
+                  <address>Brooklyn, New York, United States</address>
+                </a>
+              </li>
+
+              <li>
+                <a href="tel:+0123456789" class="contact-link">
+                  <ion-icon name="call-outline"></ion-icon>
+
+                  <span>+0123-456789</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="mailto:contact@Garashko.com" class="contact-link">
+                  <ion-icon name="mail-outline"></ion-icon>
+
+                  <span>contact@Garashko.com</span>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="social-list">
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61557761423216&mibextid=ZbWKwL"
+                  class="header-top-social-link"
+                  target="_blank"
+                >
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://twitter.com/garashko_eg"
+                  class="header-top-social-link"
+                  target="_blank"
+                >
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.instagram.com/garashko_eg"
+                  class="header-top-social-link"
+                  target="_blank"
+                >
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.tiktok.com/@garashko_eg"
+                  class="header-top-social-link"
+                  target="_blank"
+                >
+                  <ion-icon name="logo-tiktok"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-link-box">
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Company</p>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">About</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Blog</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">All Products</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Locations Map</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">FAQ</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Contact us</a>
+              </li>
+            </ul>
+
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Services</p>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Order tracking</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Wish List</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Login</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">My account</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Terms & Conditions</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Promotional Offers</a>
+              </li>
+            </ul>
+
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Customer Care</p>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Login</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">My account</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Wish List</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Order tracking</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">FAQ</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Contact us</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="logBox d-flex align-center">
-        <h3>signUp</h3>
-        <div class="form">
-          <label for="name">name</label>
-          <input
-            type="email"
-            name="name"
-            id="name"
-            placeholder="your name .."
-          />
-          <label for="username">username</label>
-          <input
-            type="email"
-            name="username"
-            id="username"
-            placeholder="your email .."
-          />
-          <label for="password">password</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="your password .."
-          />
-          <label for="password">password</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="your password .."
-          />
-          <label for="password">confirm password</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="confirm password .."
-          />
-          <a href="#">forget your password?</a>
-          <input type="checkbox" name="forget" id="forget" />
-          <label for="forget">remember me</label>
-        </div>
-        <input type="submit" value="signUp" />
-      </div>
-    </section>
-
-    <!-- start footer  -->
-    <div class="footer" id="footer">
-      <div class="container">
-        <div class="box">
-          <h3>garashko</h3>
-          <ul class="social">
-            <li class="facebook"><i class="fa-brands fa-facebook-f"></i></li>
-            <li class="twitter"><i class="fa-brands fa-twitter"></i></li>
-            <li class="youtube"><i class="fa-brands fa-youtube"></i></li>
-          </ul>
-          <p>
-            Front-End Developer
-            <br />
-            & <br />
-            Graphic Designe
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright">
+            &copy; 2024 <a href="#">Garashko</a>. All Rights Reserved
           </p>
         </div>
-        <div class="box">
-          <ul class="links">
-            <li><a href="#">important link</a></li>
-            <li><a href="#">important link</a></li>
-            <li><a href="#">important link</a></li>
-            <li><a href="#">important link</a></li>
-            <li><a href="#">important link</a></li>
-          </ul>
-        </div>
-        <div class="box">
-          <div class="line">
-            <i class="fa-solid fa-location-dot"></i>
-            <div class="info">
-              Egypt, Giza, Inside The Sphinx, Room Number 220
-            </div>
-          </div>
-          <div class="line">
-            <i class="fa-regular fa-clock"></i>
-            <div class="info">Business Hours: From 10:00 To 18:00</div>
-          </div>
-          <div class="line">
-            <i class="fa-solid fa-phone"></i>
-            <div class="info">
-              <a href="tell:01279393732">01279393732</a>
-            </div>
-          </div>
-        </div>
-        <div class="box gallary">
-          <img src="img/gallery.png" alt="" />
-          <img src="img/gallery.png" alt="" />
-          <img src="img/gallery.png" alt="" />
-          <img src="img/gallery.png" alt="" />
-          <img src="img/gallery.png" alt="" />
-          <img src="img/gallery.png" alt="" />
-        </div>
       </div>
-      <p>By @garashko</p>
-    </div>
-    <!-- end footer  -->
+    </footer>
 
-    <script src="js/main.js"></script>
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
